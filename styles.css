@@ -1,6 +1,7 @@
 :root {
     --uofuRed: #A12D37;
 }
+
 body {
     background-color: #333333;
     font-family: Arial, Helvetica, sans-serif;
@@ -63,7 +64,6 @@ body {
 
                 aside {
                     &.left {
-                        border: 5px dotted black;
                         width: 30%;
                         float: left;
 
@@ -116,12 +116,18 @@ body {
 
                             &.link {
                                 text-align: right;
+
+                                a {
+                                    color: var(--uofuRed);
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
                             }
 
-                            a {
-                                color: var(--uofuRed);
-                                /*float: right;*/
-                            }
 
 
                         }
@@ -144,7 +150,4 @@ body {
             padding: 10px 0;
         }
 
-    }
-
 }
-
