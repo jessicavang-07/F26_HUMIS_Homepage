@@ -1,0 +1,150 @@
+:root {
+    --uofuRed: #A12D37;
+}
+body {
+    background-color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    /*if user doesnt have arial, then it style uses helvetica, if not that then etc.. */
+
+    div.container {
+        width: 780px;
+        border: 1px dotted blue;
+        margin: 0 auto;
+        background-color: white;
+
+        section.middle {
+            padding: 3px 10px;
+            background-image: url('files/uofu_medallion_rt.gif');
+            background-position: bottom right;
+            background-repeat: no-repeat;
+
+            > nav { /* any nav tab gets this style */
+                text-align: right;
+                font-size: 10px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    border-right: 1px solid black;
+                    padding-right: 5px;
+                    margin-left: 3px;
+
+                    &:hover{ /* Pseudoclass: can hover over for links, images, etc.*/
+                        text-decoration: underline;
+                    }
+
+                    &:last-of-type { /*removes the end of | */
+                        border-right: none;
+                        padding-right: unset;
+                    }
+                }
+
+                img {
+                        vertical-align: middle;
+                }
+
+                &.top-nav { /* & finds the class name of top-nav in the nav */
+                    text-transform: uppercase;
+
+                }
+
+                &.bottom-nav {
+                    text-transform: lowercase;
+                }
+
+
+            }
+
+            section.brown-box {
+                min-height: 400px;
+                background-color: #C8CAAF;
+                margin: 5px 0 50px; /* Reads from top, right, bottom, left */
+                padding: 10px 10px 10px 15px;
+
+                aside {
+                    &.left {
+                        border: 5px dotted black;
+                        width: 30%;
+                        float: left;
+
+                        nav { /*makes inline tags into block level tags */
+
+                            a {
+                                display: block;
+                                color: black;
+                                text-decoration: none;
+                                border-bottom: 2px solid green;
+                                text-transform: uppercase;
+                                padding: 10px 0 10px 10px;
+                                font-size: 10px;
+                                margin-left: 3px;
+
+                                &:hover { /* Pseudoclass: can hover over for links, images, etc.*/
+                                    background-color: green;
+                                    color: white;
+                                }
+                            }
+
+                        }
+                    }
+
+                    div.links {
+                        margin: 50px auto 0;
+                        width: 153px; /* Give the same margin of this width */
+                    }
+
+                    &.right {
+                        width: 60%;
+                        float: right;
+                        background-color:#fff;
+                        padding: 10px;
+
+                        h1 {
+                            text-transform: uppercase;
+                            color: #505A2F;
+                            border-bottom: 2px dashed var(--uofuRed);
+                            font-size: 16px;
+                            font-weight: normal;
+                        }
+
+                        p {
+                            font-size: 12px;
+
+                            strong {
+                                font-size: 110%
+                            }
+
+                            &.link {
+                                text-align: right;
+                            }
+
+                            a {
+                                color: var(--uofuRed);
+                                /*float: right;*/
+                            }
+
+
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
+    }
+
+        footer{
+            background-color: #686F3E;
+            color: white;
+            font-size: 11px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    }
+
+}
+
